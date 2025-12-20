@@ -1,0 +1,121 @@
+# Cursor Rules for BEAM Projects
+
+## Language and Framework Context
+You are working on a BEAM-based project using Elixir and/or Erlang. Always follow OTP principles and BEAM ecosystem best practices.
+
+## Code Style
+
+### Elixir
+- Use snake_case for functions and variables
+- Use PascalCase for module names
+- Prefer pattern matching over conditional logic
+- Use the pipe operator |> for data transformations
+- Follow the "let it crash" philosophy for error handling
+
+### Formatting
+- Run `mix format` on all generated code
+- Follow the Elixir Style Guide
+- Keep line length to 98 characters (Elixir formatter default)
+- Use 2 spaces for indentation
+
+## Documentation
+- Add @moduledoc to all modules
+- Add @doc to all public functions
+- Include @spec type specifications for all functions
+- Write doctests in documentation when applicable
+- Document function parameters and return values
+
+## Testing
+- Generate ExUnit tests for all new code
+- Follow "describe" blocks for grouping related tests
+- Use descriptive test names with "test" macro
+- Include both positive and negative test cases
+- Write property-based tests for complex logic using StreamData
+
+## Error Handling
+- Use tagged tuples: {:ok, result} and {:error, reason}
+- Implement proper error handling in GenServers
+- Use "with" for sequential operations that may fail
+- Let processes crash for unexpected errors
+- Always handle expected errors explicitly
+
+## OTP Patterns
+- Use GenServer for stateful processes
+- Implement proper Supervisor trees
+- Follow the OTP application structure
+- Use Task for one-off concurrent operations
+- Prefer built-in OTP behaviors over custom processes
+
+## Dependencies
+- Only suggest well-maintained libraries from hex.pm
+- Check library compatibility with current Elixir version
+- Prefer built-in Erlang/OTP libraries when possible
+- Document why each dependency is needed
+
+## Performance Considerations
+- Be mindful of process message queues
+- Use ETS for shared state when appropriate
+- Avoid long-running operations in GenServer callbacks
+- Consider using Task.async_stream for parallel operations
+- Profile before optimizing
+
+## Security
+- Validate all user input
+- Use parameterized queries with Ecto
+- Sanitize data before rendering in Phoenix templates
+- Follow OWASP guidelines for web applications
+- Use secure random for tokens and secrets
+
+## Code Organization
+- Place application logic in lib/
+- Place tests in test/
+- Mirror directory structure between lib/ and test/
+- Group related modules in subdirectories
+- Keep modules focused and cohesive
+
+## Common Libraries to Use
+- phoenix: Web framework
+- ecto: Database wrapper
+- jason: JSON encoding/decoding
+- plug: Web server interface
+- ex_doc: Documentation generation
+- credo: Static code analysis
+- dialyxir: Type checking
+- stream_data: Property-based testing
+- ex_machina: Test data factories
+- mox: Mocking library
+
+## Anti-patterns to Avoid
+- Using processes without supervision
+- Ignoring compiler warnings
+- Over-using macros
+- Skipping type specifications
+- Tight coupling between modules
+- Blocking GenServer callbacks
+- Using global state without justification
+
+## When Generating Code
+1. Always include type specs
+2. Add comprehensive documentation
+3. Generate corresponding tests
+4. Follow OTP conventions
+5. Use pattern matching effectively
+6. Handle errors appropriately
+7. Consider edge cases
+
+## When Refactoring
+1. Maintain existing tests
+2. Improve pattern matching usage
+3. Extract repeated logic
+4. Enhance documentation
+5. Add missing type specs
+6. Consider performance implications
+7. Keep changes minimal and focused
+
+## When Debugging
+1. Check process state with :sys.get_state/1
+2. Use IEx.pry for interactive debugging
+3. Review GenServer callback order
+4. Verify supervision tree structure
+5. Check for message queue buildup
+6. Use Erlang observer for live inspection
