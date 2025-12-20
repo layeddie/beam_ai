@@ -41,10 +41,14 @@ This guide helps teams adopt AI coding assistants effectively for BEAM projects 
 # In your project repository
 mkdir -p .github docs
 
-# Copy base configurations
-cp path/to/beam_ai/.github/copilot-instructions.md .github/
-cp path/to/beam_ai/.cursorrules .
-cp path/to/beam_ai/docs/ai-guidelines.md docs/
+# First, clone or download beam_ai repository
+# git clone https://github.com/layeddie/beam_ai.git /tmp/beam_ai
+
+# Copy base configurations (replace BEAM_AI_PATH with actual path)
+BEAM_AI_PATH=/tmp/beam_ai  # or wherever you cloned beam_ai
+cp $BEAM_AI_PATH/.github/copilot-instructions.md .github/
+cp $BEAM_AI_PATH/.cursorrules .
+cp $BEAM_AI_PATH/docs/ai-guidelines.md docs/
 ```
 
 ### 2. Customize for Your Project

@@ -123,7 +123,7 @@ Implement a parallel map function that:
 ### External API Client
 ```
 Create a client module for a REST API that:
-- Uses HTTPoison or Req
+- Uses Req (modern, recommended) or HTTPoison (traditional)
 - Handles authentication
 - Includes retry logic with exponential backoff
 - Has proper error handling

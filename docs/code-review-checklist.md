@@ -235,6 +235,26 @@ Use this checklist when reviewing code generated or assisted by AI tools.
 
 ## Sign-off
 
+### For Digital Code Reviews (copy to PR comment):
+```markdown
+**AI Code Review Sign-off**
+
+- [ ] All applicable checklist items verified
+- [ ] Code quality meets standards
+- [ ] Tests are comprehensive
+- [ ] Security considerations addressed
+- [ ] Performance is acceptable
+
+**AI Tool Used**: [e.g., GitHub Copilot, Cursor, ChatGPT]
+**Review Result**: [Approved / Changes Requested / Needs Discussion]
+**Reviewer**: @username
+**Date**: YYYY-MM-DD
+
+**Notes**:
+[Add any specific notes, concerns, or commendations here]
+```
+
+### For Printed Reviews:
 **Reviewer**: _______________
 **Date**: _______________
 **AI Tool Used**: _______________
