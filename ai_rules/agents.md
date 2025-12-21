@@ -1,3 +1,3 @@
-# Agents
+# Collaborative AI
 
-Placeholder content. Detail the agent's activities and rules here. Flesh out more content later.
+This document is reserved for discussing and outlining principles, frameworks, and use cases for collaborative AI systems. Placeholder content will be updated with more details soon.
