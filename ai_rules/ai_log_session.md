@@ -1,3 +1,13 @@
-# AI Log Session
+# AI Session Notes
 
-Placeholder content. Explain how to manage AI log sessions here. Flesh out more content later.
+Date: YYYY-MM-DD
+Time: HH:MM:SS UTC
+
+## Key Points
+- 
+
+## Action Items
+- 
+
+## Additional Notes
+- 
