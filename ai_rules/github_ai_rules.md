@@ -1,0 +1,1 @@
+Retrieving existing content to retain it for move.
